@@ -2,9 +2,9 @@
 <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl">
     <select name="category" class="flex-1 appearance-none bg-transparent py-2 pl-3 pr-9 text-sm font-semibold">
         @if(request('category'))
-        <option value="category" disabled>Category</option>
+        <option value="">All</option>
         @else
-        <option value="category" disabled selected>Category</option>
+        <option value="" selected>All</option>
         @endif
         @foreach($categories as $category)
         @if(request('category') == $category->slug)
